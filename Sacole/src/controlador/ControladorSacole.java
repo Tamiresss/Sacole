@@ -47,7 +47,7 @@ man.dispose();//fechar a tela da manutenção
         //definir todos os atributos
         objeto.setCodigo(Integer.parseInt(man.jtfCodigo.getText()));
         objeto.setSabor(man.jtfSabor.getText());
-        objeto.setDatavalidade(man.jtfDatavalidade.getText());
+        objeto.setDatavalidade(LocalDate.parse(man.jtfDatavalidade.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         objeto.setPreco(Double.parseDouble(man.jtfPreco.getText()));
         objeto.setNrserie(Integer.parseInt(man.jtfNrserie.getText()));
         
