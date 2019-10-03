@@ -95,7 +95,7 @@ man.dispose();//fechar a tela da manutenção
             //definindo o conteúdo da tabela
             linha.add(objeto.getCodigo());
             linha.add(objeto.getSabor());
-            linha.add(objeto.getDatavalidade());
+            linha.add(objeto.getDatavalidade().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             linha.add(objeto.getPreco());
             linha.add(objeto.getNrserie());
             modelo.addRow(linha); //adicionando a linha na tabela
@@ -107,7 +107,7 @@ man.dispose();//fechar a tela da manutenção
         //Definindo os valores do campo na tela (um para cada atributo/campo)
         man.jtfCodigo.setText(objeto.getCodigo().toString());
         man.jtfSabor.setText(objeto.getSabor());
-        man.jtfDatavalidade.setText(objeto.getDatavalidade());
+        man.jtfDatavalidade.setText(objeto.getDatavalidade().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         man.jtfPreco.setText(objeto.getPreco().toString());
         man.jtfNrserie.setText(objeto.getNrserie().toString());
         

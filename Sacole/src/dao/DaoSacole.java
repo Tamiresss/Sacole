@@ -89,7 +89,7 @@ public class DaoSacole {
                 //definir um set para cada atributo da entidade, cuidado com o tipo
                 objeto.setCodigo(rs.getInt("codigo"));
                 objeto.setSabor(rs.getString("sabor"));
-                objeto.setDatavalidade(rs.getString("datavalidade"));
+                objeto.setDatavalidade(rs.getDate("datavalidade").toLocalDate());
                 objeto.setPreco(rs.getDouble("preco"));
                 objeto.setNrserie(rs.getInt("nrserie"));
  
@@ -116,7 +116,7 @@ public class DaoSacole {
                 //definir um set para cada atributo da entidade, cuidado com o tipo
                 objeto.setCodigo(rs.getInt("codigo"));
                 objeto.setSabor(rs.getString("sabor"));
-                objeto.setDatavalidade(rs.getString("datavalidade"));
+                objeto.setDatavalidade(rs.getDate("datavalidade").toLocalDate());
                 objeto.setPreco(rs.getDouble("preco"));
                 objeto.setNrserie(rs.getInt("nrserie"));
                 return objeto;//não mexa nesse, ele adiciona o objeto na lista
