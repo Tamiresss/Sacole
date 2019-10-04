@@ -57,6 +57,7 @@ public class DaoSacole {
             ps.setDate(2, Date.valueOf(objeto.getDatavalidade()));
             ps.setDouble(3, objeto.getPreco());
             ps.setInt(4, objeto.getNrserie());
+            ps.setInt(5, objeto.getCodigo());
             ps.executeUpdate();
             return true;
         } catch (SQLException | ClassNotFoundException ex) {
